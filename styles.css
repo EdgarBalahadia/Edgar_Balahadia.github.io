@@ -1,7 +1,7 @@
 :root {
     --bg: #0f1724;
     --card: #0b1220;
-    --accent: #d4af37; /* gold-ish */
+    --accent: #d4af37;
     --muted: #9aa6b2;
     --white: #f7f7f7;
     --container-max: 1000px;
@@ -66,13 +66,26 @@ body {
 }
 
 #iphone-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: contain;
     display: block;
     margin: 0 auto 20px auto;
-    transition: opacity 0.4s ease-in-out;
+    width: 100%;
+    max-width: 420px;
+    max-height: 420px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out, transform 0.25s ease;
+}
+
+@media (max-width: 767px) {
+    #iphone-image {
+        max-width: 320px;
+        max-height: 320px;
+        width: 90%;
+    }
+
+    .card {
+        padding: 14px;
+    }
 }
 
 .color-buttons {
@@ -94,12 +107,12 @@ body {
             transform: scale(1.1);
         }
 
-    .color-buttons .orange {
-        background: #d87d4a;
-    }
-
     .color-buttons .blue {
         background: #4a7cd8;
+    }
+
+    .color-buttons .orange {
+        background: #d87d4a;
     }
 
     .color-buttons .silver {
