@@ -11,80 +11,122 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Inter,system-ui,Segoe UI,Arial;
+    font-family: Inter, system-ui, Segoe UI, Arial;
 }
 
 body {
-    background: linear-gradient(180deg,var(--bg),#071023);
+    background: linear-gradient(180deg, var(--bg), #071023);
     color: var(--white);
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 24px
+    padding: 24px;
 }
 
 .hero {
     padding: 56px 0;
-    text-align: center
+    text-align: center;
 }
 
     .hero h1 {
         font-size: 40px;
         letter-spacing: -0.5px;
-        color: var(--white)
+        color: var(--white);
     }
 
 .tag {
     color: var(--muted);
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 .features {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     padding: 20px;
     border-radius: 12px;
-    margin-bottom: 18px
+    margin-bottom: 18px;
 }
 
     .features h2 {
-        color: var(--accent)
+        color: var(--accent);
     }
 
     .features ul {
         margin-top: 12px;
         list-style: disc;
         padding-left: 20px;
-        color: var(--muted)
+        color: var(--muted);
     }
 
 .gallery {
-    margin-bottom: 18px
+    margin-bottom: 18px;
+    text-align: center;
 }
+
+#iphone-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px auto;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.color-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+    .color-buttons button {
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--accent);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+        .color-buttons button:hover {
+            transform: scale(1.1);
+        }
+
+    .color-buttons .orange {
+        background: #d87d4a;
+    }
+
+    .color-buttons .blue {
+        background: #4a7cd8;
+    }
+
+    .color-buttons .silver {
+        background: #cfcfcf;
+    }
 
 .card {
     background: var(--card);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid rgba(212,175,55,0.12)
+    border: 1px solid rgba(212, 175, 55, 0.12);
 }
 
 .cta {
     padding: 16px;
-    background: linear-gradient(90deg,rgba(212,175,55,0.06),transparent);
-    border-radius: 8px
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.06), transparent);
+    border-radius: 8px;
 }
 
 footer {
     padding: 18px 0;
     text-align: center;
     color: var(--muted);
-    font-size: 14px
+    font-size: 14px;
 }
 
 a {
     color: var(--accent);
-    text-decoration: none
+    text-decoration: none;
 }
